@@ -1,0 +1,493 @@
+:root {
+    --rose-red: #ff2768;
+    --turquoise: #05e0e9;
+    --seafoam-green: #cfeed1;
+    --carafe: #4e1a3d;
+    --blue-groto:#0461B1;
+    --indigoo:#340744;
+}
+
+
+* {
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    /* font-family: 'Dancing Script', cursive; */
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+html,
+body {
+    background: var(--seafoam-green);
+    color: #050505;
+
+}
+
+/* ********************hero************************************************************** */
+#hero-landing {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/her0-img.JPG");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+@media(max-width:576px) {
+
+    #hero-landing {
+
+        background-image: url("../img/sp4.JPG");
+
+    }
+}
+
+/* ************navbar**************************************************************** */
+nav.navbar {
+    color: #f5f5f5;
+    font-weight: bold;
+    /* z-index: 99; */
+    background: rgba(66, 65, 65, .71);
+}
+
+nav a.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem;
+}
+
+
+
+nav.navbar:hover .navbar-brand {
+    color: var(--rose-red);
+}
+
+ul.navbar-nav {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background:#1e262c; */
+}
+
+ul.navbar-nav .nav-item:hover {
+    padding: 0 15px;
+}
+
+ul.navbar-nav .nav-item:hover {
+    border: 2px solid var(--rose-red);
+}
+
+ul.navbar-nav .nav-item a.nav-link {
+    transform: scale(0.9);
+    transition: 0.3s;
+    letter-spacing: .1em;
+    text-transform: capitalize;
+    border-width: 2px;
+    border-color: #fff;
+    font-size: 1.3em;
+    /* padding: 0 25px; */
+    display: block;
+}
+
+ul.navbar-nav .nav-item:hover a.nav-link {
+    transform: scale(1);
+    color: var(--turquoise);
+}
+
+@media(max-width:782px) {
+
+    ul.navbar-nav {
+        margin-top: 15px;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    ul.navbar-nav .nav-item:hover {
+        border-bottom: 2px solid var(--rose-red);
+
+    }
+}
+/* *********************hero***************************************** */
+#hero-intro {
+    margin-top: 24vh;
+    position: relative;
+}
+
+#hero-intro h5 {
+    color:#fff;
+    /* text-shadow: 1px 2px 2px #fff ; */
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 1.4em;
+}
+
+#hero-intro h3 {
+    color: var(--rose-red);
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    font-size: 1.98em;
+}
+
+@media(max-width:576px){
+    #hero-intro img {
+        opacity: .51;
+    }
+}
+/* 
+#main{
+    z-index: 1;
+} */
+
+
+
+
+/* ********************sections******************************************* */
+
+.white{
+    background: #f5f5f5;
+}
+
+.indigo{
+    background: var(--indigoo);
+}
+
+.sea-form{
+    background: var(--seafoam-green);
+}
+
+section {
+    padding: 75px 0 75px 0;
+    clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%);
+
+}
+
+section .header-section {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+section .header-section>small {
+    color: rgba(66, 65, 65, .71);
+    color: var(--rose-red);
+    font-size: 1.4em;
+    font-weight: 600;
+    font-family: 'Dancing Script', cursive;
+    text-transform: lowercase;
+}
+
+section .header-section h3 {
+    color: #050505;
+    color: var(--carafe);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 42px;
+    text-transform: capitalize;
+}
+
+
+section p {
+    font-size: 1.2em;
+    text-transform: lowercase;
+}
+
+/* ********************about******************************************* */
+section#about{
+    clip-path: polygon(0 0%, 100% 0%, 100% 96%, 0% 100%);
+
+}
+
+
+#about-img {
+    position: relative;
+}
+
+#about-intro {
+    margin-top: 24vh;
+    position: relative;
+}
+
+#about-intro::after {
+    content: "";
+    right: -2px;
+    bottom: -140px;
+    height: 145px;
+    width: 180px;
+    background-image: url("../img/rose-pink-2\ \(1\).jpg");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+#about-intro::before,#about-img::after {
+    content: "";
+    left: -6px;
+    top: -140px;
+    height: 145px;
+    width: 180px;
+    background-image: url("../img/rose-pink-2\ \(2\).jpg");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+/* **********************qualities*********************************************** */
+section#qualities .bars {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: 15px;
+
+}
+
+
+.skills-row {
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-row-gap: 15px;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    /* width: 0%; */
+
+}
+
+
+.skills-row::before {
+    content: "";
+    background: url("../img/long-rose-1.png") scroll center no-repeat;
+    left: -60px;
+    top: 0;
+    height: 421px;
+    width: 98px;
+    position: absolute;
+
+}
+
+.skills-row::after {
+    content: "";
+    background: url("../img/long-rose-2.png") scroll center no-repeat;
+    right: -80px;
+    top: 0;
+    height: 421px;
+    width: 98px;
+    position: absolute;
+
+}
+/* this bars are a pain where the sun dont shine */
+.skills-row .bar {
+    max-width: 65vw;
+    position: relative;
+    background: #DEE2EC;
+    background: lightgray;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.skills-row .bar>.bar-fill {
+    /* display: flex; */
+    background:#741AAC;
+    /* height: 100%; */
+    /* color: #951c49; */
+    /* flex-direction: column;
+    align-items: center;
+    justify-items: center; */
+}
+
+.bar-fill .tag-skill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #340744;
+    color:#fff;
+    width: 20%;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 5px;
+    overflow-y: hidden;
+    text-transform: capitalize;
+}
+
+.bar span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+
+}
+
+
+@media (max-width:962px) {
+    .skills-row .bar {
+        max-width: 85vw;
+
+    }
+
+}
+
+@media (max-width:684px) {
+
+    .skills-row::before {
+       /* display: none; */
+    
+    }
+
+    .skills-row::before {
+        content: "";
+        left: -6px;
+        top: -140px;
+        height: 145px;
+        width: 180px;
+        background-image: url("../img/rose-pink-2\ \(2\).jpg");
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        position: absolute;
+    }
+
+    .skills-row::after {
+       display: none;
+    }
+
+   
+
+
+    .skills-row .bar {
+        max-width: 100vw;
+        height: 45px;
+
+    }
+
+
+    .bar-fill .tag-skill {
+        width: 30%;
+        padding-left: 5px;
+       
+
+    }
+
+
+
+}
+
+/* ******************************* lioness club***************************************************************** */
+.img-gallery .owl-item {
+    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.07);
+    transform: scale(0.8);
+    transition: all 0.3s ease-in;
+}
+
+.img-gallery .owl-item.center {
+    transform: scale(1);
+}
+
+/* ****************************contact******************************************************************************** */
+
+section#contact{
+    position: relative;
+}
+
+/* 
+section#contact .social::before{
+    content: "";
+    left: -6px;
+    bottom: 0px;
+    height: 186px;
+    width: 234px;
+    background-image: url("../img/rose-1.png");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    position: absolute;
+
+} */
+
+
+
+.social a {
+    cursor: pointer;
+    padding: 0px 20px;
+    display: inline-block;
+
+}
+
+
+i.fa {
+    font-size: 28px;
+    color: #951c49;
+    transform: scale(0.9);
+    transition: 0.3s;
+}
+
+i.fa:hover {
+    font-size: 28px;
+    color: var(--turquoise);
+    transform: scale(1.2);
+}
+
+/* ****************************footer******************************************************************************** */
+section#footer{
+    color: #fff;
+    clip-path: none;
+    overflow: hidden;
+    
+}
+
+
+
+section#footer .footer-logo > a{
+    color: var(--turquoise);
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4em;
+    text-decoration: none;
+    cursor: pointer;
+    transform: scale(0.9);
+    transition:0.3s;
+}
+
+section#footer .footer-logo > a:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+section#footer .footer-copyright {
+    position: relative;
+}
+
+section#footer .footer-copyright::after {
+    content: "";
+    right: -2px;
+    bottom: -140px;
+    height: 145px;
+    width: 180px;
+    background-image: url("../img/rose-pink-2\ \(1\).jpg");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+section#footer .footer-copyright::before {
+    content: "";
+    left: -2px;
+    top: -140px;
+    height: 145px;
+    width: 180px;
+    background-image: url("../img/rose-pink-2\ \(2\).jpg");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+section#footer .footer-copyright > p{
+    padding-top: 25px;
+    text-transform: capitalize;
+}
+
